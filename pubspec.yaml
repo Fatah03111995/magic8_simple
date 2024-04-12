@@ -19,7 +19,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-  font:
+  fonts:
     - family: Poppins
       fonts:
-        - assets: assets/images
+        - asset: assets/fonts/Poppins-Regular.ttf

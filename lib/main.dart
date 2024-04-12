@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:magic8_decision_maker/pages/ball_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +11,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
       ),
+    );
+
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BallPage(),
     );
   }
 }
